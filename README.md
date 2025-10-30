@@ -1,81 +1,35 @@
-# Getting Started with GitHub Copilot
+<div align="center">
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+# 🎉 Congratulations marcelobuzzetti! 🎉
 
-Hey marcelobuzzetti!
+<img src="https://octodex.github.com/images/welcometocat.png" height="200px" />
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+### 🌟 You've successfully completed the exercise! 🌟
 
-Remember, it's self-paced so feel free to take a break! ☕️
+## 🚀 Share Your Success!
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/marcelobuzzetti/skills-getting-started-with-github-copilot/issues/1)
+**Show off your new skills and inspire others!**
 
-## Mergington High School Activity Management System
+<a href="https://twitter.com/intent/tweet?text=I%20just%20completed%20the%20%22Getting%20Started%20with%20GitHub%20Copilot%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fmarcelobuzzetti%2Fskills-getting-started-with-github-copilot%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Share%20on%20X-1da1f2?style=for-the-badge&logo=x&logoColor=white" alt="Share on X" />
+</a>
+<a href="https://bsky.app/intent/compose?text=I%20just%20completed%20the%20%22Getting%20Started%20with%20GitHub%20Copilot%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fmarcelobuzzetti%2Fskills-getting-started-with-github-copilot%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Share%20on%20Bluesky-0085ff?style=for-the-badge&logo=bluesky&logoColor=white" alt="Share on Bluesky" />
+</a>
+<a href="https://www.linkedin.com/feed/?shareActive=true&text=I%20just%20completed%20the%20%22Getting%20Started%20with%20GitHub%20Copilot%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fmarcelobuzzetti%2Fskills-getting-started-with-github-copilot%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Share%20on%20LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Share on LinkedIn" />
+</a>
 
-This is a FastAPI-based web application for managing extracurricular activities at Mergington High School. Students can view available activities and sign up for them.
+### 🎯 What's Next?
 
-### Features
+**Keep the momentum going!**
 
-- View all available activities with details
-- Sign up for activities 
-- Unregister from activities (with delete button UI)
-- Real-time participant count and availability
-- Responsive web interface
+[![](https://img.shields.io/badge/Return%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/marcelobuzzetti/skills-getting-started-with-github-copilot/issues/1)
+[![GitHub Skills](https://img.shields.io/badge/Explore%20GitHub%20Skills-000000?style=for-the-badge&logo=github&logoColor=white)](https://learn.github.com/skills)
 
-### API Endpoints
+*There's no better way to learn than building things!* 🚀
 
-- `GET /` - Redirects to the main application
-- `GET /activities` - Get all activities
-- `POST /activities/{activity_name}/signup` - Sign up for an activity
-- `DELETE /activities/{activity_name}/unregister` - Unregister from an activity
-
-### Testing
-
-This project includes comprehensive test coverage using pytest:
-
-- **14 tests** covering all endpoints and functionality
-- **100% code coverage** 
-- Tests for success cases, error cases, and edge cases
-- Automated data reset between tests for isolation
-
-#### Running Tests
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run all tests
-python -m pytest tests/ -v
-
-# Run tests with coverage
-python -m pytest tests/ --cov=src --cov-report=term-missing
-
-# Using make (if available)
-make test
-make test-cov
-```
-
-#### Test Structure
-
-- `tests/test_basic_endpoints.py` - Basic API endpoint tests
-- `tests/test_signup.py` - Activity signup functionality tests  
-- `tests/test_unregister.py` - Activity unregistration functionality tests
-- `tests/conftest.py` - Test configuration and fixtures
-
-### Development
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the development server
-cd src && python -m uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-
-# Or using make
-make serve
-```
-
-The application will be available at http://localhost:8000
+</div>
 
 ---
 
