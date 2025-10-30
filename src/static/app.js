@@ -24,7 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
         let participantsHTML = '';
         if (details.participants.length > 0) {
           const participantsList = details.participants
-            .map(participant => `<li>${participant}</li>`)
+            .map(participant => `
+              <li>
+                <span class="participant-name">${participant}</span>
+                <button class="delete-participant" onclick="unregisterParticipant('${name}', '${participant}')" title="Remove participant">
+                  ✕
+                </button>
+              </li>
+            `)
             .join('');
           participantsHTML = `
             <div class="participants-section">
@@ -64,6 +71,50 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error fetching activities:", error);
     }
   }
+
+  // Function to unregister a participant from an activity
+  async function unregisterParticipant(activityName, email) {
+    if (!confirm(`Are you sure you want to remove ${email} from ${activityName}?`)) {
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `/activities/${encodeURIComponent(activityName)}/unregister?email=${encodeURIComponent(email)}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        messageDiv.textContent = result.message;
+        messageDiv.className = "success";
+        messageDiv.classList.remove("hidden");
+        
+        // Refresh the activities list to show updated participant count
+        fetchActivities();
+      } else {
+        messageDiv.textContent = result.detail || "An error occurred";
+        messageDiv.className = "error";
+        messageDiv.classList.remove("hidden");
+      }
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        messageDiv.classList.add("hidden");
+      }, 5000);
+    } catch (error) {
+      messageDiv.textContent = "Failed to unregister participant. Please try again.";
+      messageDiv.className = "error";
+      messageDiv.classList.remove("hidden");
+      console.error("Error unregistering participant:", error);
+    }
+  }
+
+  // Make unregisterParticipant function globally available
+  window.unregisterParticipant = unregisterParticipant;
 
   // Handle form submission
   signupForm.addEventListener("submit", async (event) => {
